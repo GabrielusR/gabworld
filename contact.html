@@ -8,38 +8,44 @@
     <meta name="keywords" content="personal journal, gabriel ramos, web development, music, engineering, inovation, problem solving, science, math, logic, programming, java, computer science, it, electrical engineering, guitar, computer music, composition" />
     <meta name="description" content="A personal journal about my personal interests. Namely, web development & programming, music and engineering." />
     <meta name="author" content="Gabriel Ramos">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" type="image/jpg" href="gw.ico">
+    
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 
 <body id="contact">
-
-    <div id="top-section">
+   
+    <header>
         <h1 id="logo">
         <a href="index.html">/Gab World</a>
         </h1>
 
         <p id="linetag">Welcome to my world!
         <br /> A world of web development, music, and engineering.</p>
-    </div><!-- top-section -->
+    </header><!-- header -->
 
-    <div class="navbar">
+    <nav>
         <ul>
             <a href="index.html"><li>/home</li></a>
             <a href="webdev.html"><li>/web development & programming</li></a>
             <a href="music.html"><li>/music</li></a>
             <a href="engineering.html"><li id="engineering">/engineering</li></a>
-            <a href="contact.html"><li  id="contact">/contact me</li></a>
+            <a href="contact.html"><li id="contact">/contact & location</li></a>
         </ul>
-    </div>
+    </nav><!-- navbar -->
     
-    <div id="main-section">
+    <main>
         
         <form>
-          <h2>Contact</h2>
+          <h2>/Contact</h2>
+          <p>Contact me through this form. I'm glad to hear from you.</p>
+          
            <div class="field-container">
                <label for="name">Name:</label>
-                <input id="name" type="text" name="name" placeholder="e.g Jhon Doe" required>
+                <input id="name" type="text" name="name" placeholder="e.g Jhon Doe" required maxlength="30">
             </div>
             
             <div class="field-container">
@@ -47,23 +53,32 @@
                 <input id="email" type="email" name="email" placeholder="e.g jhondoe@email.com" required>
             </div>
             
+            <br>        
+            
+            <textarea name="comments" id="comments" cols="96" rows="20"></textarea>
+            
             <br>
             
-            <textarea name="comments" id="comments" cols="60" rows="20" placeholder="Drop us a line here!"></textarea> <br>
-            
-            <input type="submit" value="Email me!">
-            <input type="reset" value="Reset form">
+            <input type="submit" value="SEND">
+            <input type="reset" value="RESET">
         </form>
+        
+        <div id="location">
+            <h2>/Location</h2>
+            <p>And this is where I live. Rio de Janeiro, Brazil!</p>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470410.4644185151!2d-43.728528992584614!3d-22.91035524405381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bde559108a05b%3A0x50dc426c672fd24e!2sRio+de+Janeiro%2C+RJ!5e0!3m2!1spt-BR!2sbr!4v1461786902718" width="700" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
   
         <p class="anchor-top"><a href="#contact">Go back to top ^</a></p>
     
-    </div><!-- main-section -->
+    </main><!-- main -->
     
-    <div id="footer-section">
+    <footer>
        
         <small>&copy; 2016 Gab World</small>
         
-    </div>
+    </footer><!-- footer -->
 
 </body>
 

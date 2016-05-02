@@ -1,24 +1,38 @@
-/*===================
+ /*===================
     Global Styles
 =====================*/
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('open-sans/OpenSans-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {    
     margin: 0;
     padding: 0;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    background-color: #333;
+    background: radial-gradient(farthest-corner at 50% 99% ,rgba(30, 99, 30, 0.8) 5% , #222 99%);
     color: #fff;
     position: relative;
 }
 
+/* html5 elements display */
+address, article, aside, canvas, content, details, figcaption, figure, footer, header, hgroup, nav, menu, section, summary {
+	display:block;
+}
+
+
 a,a:link {
-    color: forestgreen;
+    color: #fff;
     text-decoration: none;
-    border-bottom: 1px dotted #fff;
+    border-bottom: 1px solid #fff;
+    transition: all .4s;
 }
 
 a:hover {
-    border-bottom-color: forestgreen;
+    border-bottom: 1px solid forestgreen;
 }
 
 a:active {
@@ -26,26 +40,33 @@ a:active {
     top: 3px;
 }
 
+iframe {
+    position: relative;
+    box-shadow: 1px 1px 15px forestgreen, 1px 1px 10px #fff;
+}
+
+
 /*===================
     General Styles
 =====================*/
 
-body#home .navbar #home, 
-body#engineering .navbar #engineering,
-body#music .navbar #music, 
-body#webdev .navbar #webdev,
-body#contact .navbar #contact{
+body#home nav #home, 
+body#engineering nav #engineering,
+body#music nav #music, 
+body#webdev nav #webdev,
+body#contact nav #contact{
     width: 100%;
     right: 20px;
 }
 
 h1, h2, h1 a, h2 a {
+    font-family: 'Open Sans', Helvetica, sans-serif;
     padding: 0 0 5px;
     color: #fff;
-    text-shadow: 1px 1px 10px forestgreen, 0 0 10px #fff;
+    text-shadow: 1px 1px 5px forestgreen, 0 0 10px #fff;
 }
 
-#top-section, #main-section, #footer-section {
+header, main, footer {
     padding: 0 20px 10px;
 }
 
@@ -53,24 +74,30 @@ h1, h2, h1 a, h2 a {
     Top Section
 =====================*/
 
-#top-section {
+header {
     position: relative;
     top: 30px;
+    padding-bottom: 30px
 }
 
 #logo {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 70px 0 0;
+    margin: 0 90px 0 0;
     font-size: 50px;
     text-transform: uppercase;
     text-shadow: 0 0 20px 5px #fff;
+    transition: transform 1s;
 }
 
 #logo a {
-    border-bottom: none;
     display: inline-block;
     padding: 30px;
+    border-bottom: 1px solid #fff;
+}
+
+#logo a:hover {
+    border-bottom: 1px solid forestgreen;
 }
 
 #linetag {
@@ -81,43 +108,46 @@ h1, h2, h1 a, h2 a {
     text-shadow: 1px 1px 10px forestgreen, 0 0 10px #fff;
 }
 
-.navbar {
+nav {
     position: fixed;
     right: 0;
     top: 10px;
 }
 
-.navbar a {
+nav a {
     border: none;
 }
 
-.navbar ul {
+nav ul {
     list-style-type: none;
 }
 
-.navbar li {
+nav li {
     opacity: 0.4;
     position: relative;
-    background-color: #fff;
+    background-color: forestgreen;
     padding: 10px 10px 5px 10px;
     margin: 5px 0;
     border: 1px solid forestgreen;
+    border-radius: 5px;
+    transition: opacity 0.5s;
 }
 
-.navbar li:hover {
+nav li:hover {
     opacity: 1;
 }
 
 .quote-section {
-    margin: 50px 50px 30px;
     text-align: center;
+    margin: 50px 290px 0;
+    width: 800px;
 }
 
 /*===================
     Main Section
 =====================*/
 
-#main-section {
+main {
     position: relative;
     width: 1000px;
     margin: 0 auto;
@@ -131,51 +161,74 @@ h1, h2, h1 a, h2 a {
     margin: 0 10px;
 }
 
+.interest img {
+    border-radius: 5px;
+}
+
 .interest p {
     text-align: left;   
 }
 
 form {
-    width: 500px;
-    padding: 20px 0;
-    margin: 20px auto;
+    width: 800px;
+    margin: 70px auto 30px;
 }
 
 .field-container {
     display: inline-block;
+    margin: 5px 45px;
+}
+
+form input[type="text"],
+form input[type="email"]{
+    border-radius: 5px;
+    padding: 5px;
 }
 
 form textarea {
     display: block;
-    margin: 20px auto 10px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 form input[type="submit"],
 form input[type="reset"]{
     width: 100px;
-    margin: 0 70px;
+    margin-left: 160px;
     padding: 5px 10px;
     outline: none;
+    border-radius: 3px;
 }
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    box-shadow: 0 3px 10px forestgreen;
+}
+
 
 form label {
     width: 70px;
     float: left;
 }
 
+#location {
+    width: 800px;
+    margin: 0 auto 30px;
+}
+
 .anchor-top {
     position: absolute;
-    right: 0;
-    bottom: 10px;
+    right: -30px;
+    bottom: 5px;
 }
 
 /*===================
     Footer Section
 =====================*/
 
-#footer-section {
+footer {
     text-align: center;
     margin-top: 10px;
     padding: 10px 0 0;
     border-top: 1px dotted #fff;
-}
+} 
