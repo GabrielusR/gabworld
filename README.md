@@ -1,7 +1,5 @@
-# Gab World
-
+# Gab World - personal website
 ---
 
-A website on my personal interests.
-
-[See it live here!](http://gabrielusr.github.io/gabworld/)
+A personal website where I write a little on my aspirations concerning my top 3 personal interests; 
+Music, Web Development and Programming in general, and Engineering.
